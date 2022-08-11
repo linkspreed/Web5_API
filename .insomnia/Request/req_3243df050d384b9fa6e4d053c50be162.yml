@@ -1,0 +1,66 @@
+_id: req_3243df050d384b9fa6e4d053c50be162
+type: Request
+parentId: fld_0df06aa963b04fedbe212c2c8feb79e5
+modified: 1654097617315
+created: 1651501353496
+url: "{{ _.base_url }}/api/teams/folders"
+name: Create Team Folder
+description: |-
+  Create new Team Folder and invite new members into it.
+  ```
+  POST /api/teams/folders
+
+  Accept: application/json
+  Authorization: Bearer
+  ```
+
+  # Payload
+
+  ## name `string` `required`
+  The name of the team folder.
+
+  ## invitations `array` `required`
+  The array of invitations which specify who invite to the team folder.
+
+  ## invitations.*.email `string` `required`
+  The email address of the user
+
+  ## invitations.*.permission `string` `required`
+  The permission for the user. Can be `can-edit` or `can-view`
+
+  ## invitations.*.type `string` `required`
+  The type of the object, `invitation` value is required
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Team API",
+    	"invitations": [
+    		{
+    			"email": "jane@doe.com",
+    			"permission": "can-edit",
+    			"type": "invitation"
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_42b9e6208d53410ab4cf6c1c965fc3a9
+  - id: pair_a436b987440747fa9e1163df0ff0ffd9
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1651475427245.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

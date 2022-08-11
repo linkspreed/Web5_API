@@ -1,0 +1,87 @@
+_id: req_b1632631ad714cfda22263c0c03036f8
+type: Request
+parentId: fld_cbca86fa8b4f41189a36719831403788
+modified: 1654097664780
+created: 1651504340992
+url: "{{ _.base_url }}/api/file-request"
+name: Create File Request
+description: >-
+  Create new file request.
+
+  ```
+
+  POST /api/file-request
+
+
+  Accept: application/json
+
+  Authorization: Bearer
+
+  ```
+
+
+  # Payload
+
+
+  ## email `string`
+
+  The email address to send upload request link via email. 
+
+
+  ## notes `string`
+
+  The notes for the upload request recipient.
+
+
+  ## folder_id `string`
+
+  The id of the parent folder under which upload request folder will be created. If not set, the folder with upladed files will be created in home directory.
+
+
+  ## name `string`
+
+  The name of folder which will be created after upload request will be filled.
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_8b3bc3d1cb954c6fb8eaec6ecf7138d3
+      name: email
+      value: jane@doe.com
+      description: ""
+      disabled: false
+    - id: pair_1cfb64e60a8d429d93631978b47f32c7
+      name: notes
+      value: Please send me any files!
+      description: ""
+      disabled: false
+    - id: pair_03b08ba1419242fcae33e2636ac38451
+      name: folder_id
+      value: ""
+      description: ""
+      disabled: false
+    - id: pair_05509fdec01142f48c3acb9fba77c347
+      name: name
+      value: My Upload Request
+      description: ""
+      disabled: false
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_b90f739e657f4a199113f8d84dbfb395
+  - id: pair_af06f639a6bf4710b24713f9a9d9038f
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1651504340992
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

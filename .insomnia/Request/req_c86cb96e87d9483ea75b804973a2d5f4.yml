@@ -1,0 +1,69 @@
+_id: req_c86cb96e87d9483ea75b804973a2d5f4
+type: Request
+parentId: fld_b63e622064614743b628f68689ec2bde
+modified: 1654095995508
+created: 1652434975419
+url: "{{ _.base_url }}/api/sharing/create-folder/{token}"
+name: Create Folder
+description: >-
+  Create new folder within shared folder.
+
+  ```
+
+  POST /api/sharing/create-folder/{token}
+
+
+  Accept: application/json
+
+  ```
+
+
+  # URL Parameters
+
+
+  #### token `string`
+
+
+  # Payload
+
+
+  ## name `string` `required`
+
+  The name of the new folder
+
+
+  ## parent_id `uuid`
+
+  The id of the parent folder, if not set, then the folder will be created in the home directory of the shared folder
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_645ecde3ddb34796870e60e6949bcd33
+      name: name
+      value: New Folder
+      description: ""
+      disabled: false
+    - id: pair_ab0c6223428240eaab48a0384a15acf0
+      name: parent_id
+      value: ""
+      description: ""
+      disabled: true
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_7f881fab6a5f48e9ae26c2ea51d6e314
+  - id: pair_a2b499b88681458ca3b6789c31c7b485
+    name: Accept
+    value: application/json
+    description: ""
+authentication: {}
+metaSortKey: -1652429947430
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,78 @@
+_id: req_dcb69732e1c544929f01c228409bd583
+type: Request
+parentId: fld_b63e622064614743b628f68689ec2bde
+modified: 1654099191071
+created: 1652434975427
+url: "{{ _.base_url }}/api/sharing/move/{token}"
+name: Move Item
+description: >-
+  Move one or many files or folders elsewhere within shared folder.
+
+  ```
+
+  POST /api/sharing/move/{token}
+
+
+  Accept: application/json
+
+  ```
+
+
+  # URL Parameters
+
+
+  #### token `string`
+
+
+  # Payload
+
+
+  ## to_id `uuid`
+
+  The id of the parent folder, there the items move. If null, then the items will be moved into the home location
+
+
+  ## items `array` `required`
+
+  The array of the items
+
+
+  ## items.*.type `string` `required`
+
+  The type of the deleting item. Allowed types are `folder` or `file`.
+
+
+  ## items.*.id `uuid` `required`
+
+  The ID of the item.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"to_id": "a4e7883c-cbda-411e-95b6-021f097040a8",
+    	"items": [
+    		{
+    			"type": "file",
+    			"id": "{item_id}"
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_7f881fab6a5f48e9ae26c2ea51d6e314
+  - id: pair_f770877e639a458383c7f900cb19a85e
+    name: Accept
+    value: application/json
+    description: ""
+authentication: {}
+metaSortKey: -1652429947280
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

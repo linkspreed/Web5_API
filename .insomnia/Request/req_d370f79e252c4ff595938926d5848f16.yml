@@ -1,0 +1,51 @@
+_id: req_d370f79e252c4ff595938926d5848f16
+type: Request
+parentId: fld_ffe856633832466f98b35a5819ffd40b
+modified: 1654096288788
+created: 1651476144058
+url: "{{ _.base_url }}/api/search"
+name: Search Users
+description: |
+  Search users.
+  ```
+  GET /api/search
+
+  Accept: application/json
+  Authorization: Bearer
+  ```
+
+  # Query Parameters
+
+  ## query `string` `required`
+  Your search query to find files or folders
+
+  ## filter `string` `required`
+  Type of the active filter. Only `users` is allowed.
+method: GET
+body: {}
+parameters:
+  - id: pair_7dd9336b93c24ec9a2a4f6b5c8d10888
+    name: filter
+    value: users
+    description: ""
+  - id: pair_e00110d6bf554a37ac9754d185e7f5ef
+    name: query
+    value: howdy@hi5ve.digital
+    description: ""
+headers:
+  - id: pair_877e0d56c575483b8bf0f0f9a4cda628
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+  disabled: false
+metaSortKey: -1651474753883.5938
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

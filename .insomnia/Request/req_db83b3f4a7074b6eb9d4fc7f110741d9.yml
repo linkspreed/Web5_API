@@ -1,0 +1,67 @@
+_id: req_db83b3f4a7074b6eb9d4fc7f110741d9
+type: Request
+parentId: fld_dcd850591f044a1a9df7e2a1ad30f457
+modified: 1654096479336
+created: 1651475789765
+url: "{{ _.base_url }}/api/teams/folders/all"
+name: Get Team Folders
+description: |-
+  Get all user Team Folders.
+  ```
+  GET /api/teams/folders/all
+
+  Accept: application/json
+  Authorization: Bearer
+  ```
+  Get content of single team folder
+  ```
+  GET /api/teams/folders/{folder_id}
+
+  Accept: application/json
+  Authorization: Bearer
+  ```
+  ## URL Parameters
+
+  #### folder_id `string`
+
+  # Query Parameters
+
+  ### page `integer`
+  Get the paginated results
+
+  ### sort `string`
+  Define default sorting. Available attributes are `created_at` and `name`
+
+  ### direction `string`
+  Define default sorting. Available attributes are `DESC` and `ASC`
+method: GET
+body: {}
+parameters:
+  - id: pair_ecca9833a48c469e969299dc6c8953e8
+    name: page
+    value: "1"
+    description: ""
+  - id: pair_149982de067b4678a9dba1cca80a3720
+    name: sort
+    value: created_at
+    description: ""
+  - id: pair_b01eb00409a146068681e615759624e4
+    name: direction
+    value: DESC
+    description: ""
+headers:
+  - id: pair_52ba9d3aeb3947a382113b8df054565e
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1651475427145.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

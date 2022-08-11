@@ -1,0 +1,51 @@
+_id: req_344b0919921740d4827db2ab84ee61bd
+type: Request
+parentId: fld_c39aeb13e0304378a778b49e3d049682
+modified: 1654098088250
+created: 1651472183034
+url: "{{ _.base_url }}/api/user/avatar"
+name: Update Avatar
+description: |
+  Update user avatar.
+  ```
+  POST /api/user/avatar
+
+  Accept: application/json
+  Authorization: Bearer
+  ```
+
+  # Payload
+
+  ## avatar `file` `required`
+  The user avatar image file. Allowed are `png`, `jpg` or `jpeg`.
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_4d61f8dbf1f448919c4265a3083192de
+      name: avatar
+      value: ""
+      description: ""
+      type: file
+      multiline: null
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_39dca7b848e84a2b8753c1e31a9a2c28
+    disabled: false
+  - id: pair_92c5a03086e04751a5c8e3b4dcf4ecf5
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1651471765385
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

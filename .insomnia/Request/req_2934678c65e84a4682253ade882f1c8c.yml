@@ -1,0 +1,52 @@
+_id: req_2934678c65e84a4682253ade882f1c8c
+type: Request
+parentId: fld_ae9be34e05c143c9b73f0de89e01a697
+modified: 1654097609113
+created: 1651481790564
+url: "{{ _.base_url }}/api/share/{token}/email"
+name: Send Link on Email
+description: |-
+  Send share link to single or multiple emails.
+  ```
+  POST /api/share/{token}/email
+
+  Accept: application/json
+  Authorization: Bearer
+  ```
+  # URL Parameters
+
+  #### token `string`
+
+  # Payload
+
+  ## emails `array` `required`
+  The array of the valid email adresses
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"emails": [
+    		"jane@doe.com"
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_2430fa999c404d9ea1074815879acff3
+  - id: pair_15142704cdd34e7e8f3491c0c98bc963
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1651479828979
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

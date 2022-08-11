@@ -1,0 +1,50 @@
+_id: req_fe64d612203d405b8c59f484dfca615b
+type: Request
+parentId: fld_9e03e083f5e9430e945ebd4f662d8fa0
+modified: 1654097131013
+created: 1652430956186
+url: "{{ _.base_url }}/api/file-request/{file_request_id}/navigation"
+name: Get Navigation Tree
+description: |-
+  Get folder structure hierarchy within File Request.
+  ```
+  GET /api/file-request/{file_request_id}/navigation
+
+  Accept: application/json
+  ```
+  # URL Parameters
+
+  #### file_request_id `string`
+
+  # Query Parameters
+
+  ### sort `string`
+  Define default sorting. Available attributes are `created_at` and `name`
+
+  ### direction `string`
+  Define default sorting. Available attributes are `DESC` and `ASC`
+method: GET
+body: {}
+parameters:
+  - id: pair_66b1894d20604d458092d771622a0ed4
+    name: sort
+    value: created_at
+    description: ""
+  - id: pair_3dc7115e30c3404d919857344615a92c
+    name: direction
+    value: DESC
+    description: ""
+headers:
+  - id: pair_dcb1e3e470cf474e844a50b2263e6ae0
+    name: Accept
+    value: application/json
+    description: ""
+authentication: {}
+metaSortKey: -1651474759297.3906
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

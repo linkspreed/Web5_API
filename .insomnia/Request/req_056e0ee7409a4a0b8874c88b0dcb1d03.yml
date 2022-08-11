@@ -1,0 +1,34 @@
+_id: req_056e0ee7409a4a0b8874c88b0dcb1d03
+type: Request
+parentId: fld_af48ace5c9014c87945e6550bacf5697
+modified: 1654098150986
+created: 1651470986498
+url: "{{ _.base_url }}/api/notifications"
+name: Delete All
+description: |-
+  It delete all available user notifications.
+  ```
+  DELETE /api/notifications
+
+  Accept: application/json
+  Authorization: Bearer
+  ```
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - id: pair_f5b5dba2794641ea8a981a2045bce06a
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1651470828897
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

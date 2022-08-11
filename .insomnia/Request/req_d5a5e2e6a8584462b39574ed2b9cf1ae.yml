@@ -1,0 +1,45 @@
+_id: req_d5a5e2e6a8584462b39574ed2b9cf1ae
+type: Request
+parentId: fld_115385e6318e41de9b67d278fa75bd44
+modified: 1654098046583
+created: 1651474743056
+url: "{{ _.base_url }}/api/password/recover"
+name: Send Recovery Mail
+description: |
+  Send mail to recover password.
+  ```
+  POST /api/password/recover
+
+  Accept: application/json
+  ```
+
+  # Payload
+
+  ## email `string` `required`
+  The email where to send recovery link
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_afd4270cddb542e0ae210f54e277e84e
+      name: email
+      value: jane@doe.com
+      description: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_1db334ee29aa40fd847e556e77fdc1d7
+  - id: pair_b8e3f01475e8405786c66583b668a0f0
+    name: Accept
+    value: application/json
+    description: ""
+authentication: {}
+metaSortKey: -1651474743056
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

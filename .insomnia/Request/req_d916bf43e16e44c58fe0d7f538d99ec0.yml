@@ -1,0 +1,34 @@
+_id: req_d916bf43e16e44c58fe0d7f538d99ec0
+type: Request
+parentId: fld_583aaad7c75245d085ea02e242485f88
+modified: 1654098143579
+created: 1651471388833
+url: "{{ _.base_url }}/api/user/transactions"
+name: Get Transactions
+description: |-
+  Get all user transactions.
+  ```
+  GET /api/user/transactions
+
+  Accept: application/json
+  Authorization: Bearer
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_0c6b345e97b94e9797cede10f2c94176
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1651471388833
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

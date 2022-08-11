@@ -1,0 +1,74 @@
+_id: req_a19dba17fb534f24bb304790b7040126
+type: Request
+parentId: fld_c39aeb13e0304378a778b49e3d049682
+modified: 1654098105767
+created: 1651471765335
+url: "{{ _.base_url }}/api/user/settings"
+name: Update Setting
+description: |
+  Update user settings.
+  ```
+  POST /api/user/settings
+
+  Accept: application/json
+  Authorization: Bearer
+  ```
+
+  # Payload
+
+  ## name `string` `required`
+  Name of the attribute you are going to update. Allowed attributes are:
+  - color (HEX format)
+  - first_name
+  - last_name
+  - address
+  - state
+  - city
+  - postal_code
+  - country (ISO 3166-1 alpha-2 format)
+  - phone_number
+  - timezone (1.0, 2.0, 3.0...)
+  - emoji_type (twemoji|system)
+  - theme_mode (light|dark|system)
+
+  ## value `string|integer` `required`
+  The string or integer value
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_fcb059a2fa1844789d9499308f5923bb
+      name: name
+      value: first_name
+      description: ""
+      disabled: false
+    - id: pair_1de2e112875448e9b0a076b79aaad05b
+      name: value
+      value: Jane
+      description: ""
+      disabled: false
+    - id: pair_da99352e2c474768b07c1539fafd3642
+      name: _method
+      value: patch
+      description: ""
+      disabled: false
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_39dca7b848e84a2b8753c1e31a9a2c28
+  - id: pair_06c4f16752b34235bce0ac3452ea6376
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1651471765335
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

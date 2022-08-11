@@ -1,0 +1,68 @@
+_id: req_c2002790ba6145dcb9d91d8b58a41657
+type: Request
+parentId: fld_56bf1280cc4643648c405bbfc1609896
+modified: 1654099120203
+created: 1651478950578
+url: "{{ _.base_url }}/api/zip"
+name: ZIP & Download
+description: >
+  Zip single or multiple files or folders and download them immediately.
+
+  ```
+
+  GET /api/zip?items={item_id}|{type},{item_id}|{type}
+
+
+  Accept: application/json
+
+  Authorization: Bearer
+
+  ```
+
+  Example of request 
+
+  ```
+
+  GET /api/zip?items=03a76121-369e-4473-9baf-1e4225823ed1|folder,0a1122fa-cba2-45dc-9b8d-7d5b5feaab57|file
+
+  ```
+
+
+  # Query Parameters
+
+  ## items `item_id`|`type`
+
+  `items` parameter contain 2 values separated by pipe `|`. You can apply multiple items separated by comma `,`. Please see the example above.
+
+
+  #### 1. item_id `uuid` `required`
+
+  Your search query to find files or folders
+
+
+  #### 2. type `string` `required`
+
+  The type of the requested item. Allowed types are `folder` or `file`.
+method: GET
+body: {}
+parameters:
+  - id: pair_4bd35f17b3ff4abcb34dc7cae2fbf3b7
+    name: items
+    value: "{item_id}|file,{item_id}|folder"
+    description: ""
+headers:
+  - id: pair_8dfbcca378ba493a88e56aa6637b8655
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1651475971807.1719
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

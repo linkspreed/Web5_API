@@ -1,0 +1,75 @@
+_id: req_352adebdb3d949eea12d56309dcdc934
+type: Request
+parentId: fld_1252a88cf5964c4d92ef7db221c6be24
+modified: 1654099114876
+created: 1651478726635
+url: "{{ _.base_url }}/api/move"
+name: Move Item
+description: >-
+  Move one or many files or folders elsewhere
+
+  ```
+
+  POST /api/move
+
+
+  Accept: application/json
+
+  Authorization: Bearer
+
+  ```
+
+
+  # Payload
+
+  ## to_id `uuid`
+
+  The id of the parent folder, there the items move. If null, then the items will be moved into the home location
+
+
+  ## items `array` `required`
+
+  The array of the items
+
+
+  ## items.*.type `string` `required`
+
+  The type of the deleting item. Allowed types are `folder` or `file`.
+
+
+  ## items.*.id `uuid` `required`
+
+  The ID of the item.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"to_id": null,
+    	"items": [
+    		{
+    			"type": "file",
+    			"id": "{item_id}"
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_7f881fab6a5f48e9ae26c2ea51d6e314
+  - id: pair_f770877e639a458383c7f900cb19a85e
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1651476003846.0938
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,67 @@
+_id: req_e8493b9d551a40f8ada737c32ab5d345
+type: Request
+parentId: fld_c13c11ea5c604c75a36f9af9a67863fe
+modified: 1654097466736
+created: 1651475643480
+url: "{{ _.base_url }}/api/browse/trash/all"
+name: Get Content
+description: |-
+  Get all trash content.
+  ```
+  GET /api/browse/trash/all
+
+  Accept: application/json
+  Authorization: Bearer
+  ```
+  Get content of single deleted folder
+  ```
+  GET /api/browse/trash/{folder_id}
+
+  Accept: application/json
+  Authorization: Bearer
+  ```
+  ## URL Parameters
+
+  #### folder_id `string`
+
+  # Query Parameters
+
+  ### page `integer`
+  Get the paginated results
+
+  ### sort `string`
+  Define default sorting. Available attributes are `created_at` and `name`
+
+  ### direction `string`
+  Define default sorting. Available attributes are `DESC` and `ASC`
+method: GET
+body: {}
+parameters:
+  - id: pair_0278a061b4c94aaab51763e5de6d4108
+    name: page
+    value: "1"
+    description: ""
+  - id: pair_b37948c48a0d43ba8e60a845800ebc84
+    name: sort
+    value: created_at
+    description: ""
+  - id: pair_61e62a4ce2ca4d1f97ccc17f3a5548b6
+    name: direction
+    value: DESC
+    description: ""
+headers:
+  - id: pair_df672d7b496d4fb18be2cd7f1b687d9e
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1651476324285.3125
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

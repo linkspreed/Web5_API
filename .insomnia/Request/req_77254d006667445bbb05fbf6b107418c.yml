@@ -1,0 +1,49 @@
+_id: req_77254d006667445bbb05fbf6b107418c
+type: Request
+parentId: fld_ae9be34e05c143c9b73f0de89e01a697
+modified: 1654097611879
+created: 1651481099717
+url: "{{ _.base_url }}/api/share/revoke"
+name: Cancel Sharing
+description: |-
+  Cancel files or folders sharing.
+  ```
+  DELETE /api/share/revoke
+
+  Accept: application/json
+  Authorization: Bearer
+  ```
+
+  # Payload
+
+  ## tokens `array` `required`
+  The array of the share tokens to delete
+method: DELETE
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"tokens": [
+    		"WNFmojqjgoIjIFJv"
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_a756789e96af4e94aca70b64f3c19526
+  - id: pair_8e57bd66b537401a85a4483117009af5
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1651479828929
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

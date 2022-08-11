@@ -1,0 +1,61 @@
+_id: req_fed826eb2cb242b3b47d3e97573a4edb
+type: Request
+parentId: fld_9e03e083f5e9430e945ebd4f662d8fa0
+modified: 1654097084683
+created: 1652431225113
+url: "{{ _.base_url }}/api/file-request/{file_request_id}/browse/all"
+name: Browse Files
+description: |-
+  Get all files and folders within File Request.
+  ```
+  GET /api/file-request/{file_request_id}/browse/all
+
+  Accept: application/json
+  ```
+  ### URL Parameters
+
+  #### file_request_id `string`
+
+  Get content of single file request folder
+  ```
+  GET /api/file-request/{file_request_id}/browse/{folder_id}
+
+  Accept: application/json
+  ```
+  ### URL Parameters
+
+  #### file_request_id `string`
+  #### folder_id `string`
+
+  # Query Parameters
+
+  ### sort `string`
+  Define default sorting. Available attributes are `created_at` and `name`
+
+  ### direction `string`
+  Define default sorting. Available attributes are `DESC` and `ASC`
+method: GET
+body: {}
+parameters:
+  - id: pair_be0876cf1bca45128da8ce14789cc664
+    name: sort
+    value: created_at
+    description: ""
+  - id: pair_fe63c625b3cf46cb99d4fb86404a8679
+    name: direction
+    value: DESC
+    description: ""
+headers:
+  - id: pair_85fd7b3c000f43dcbda8bc19cd381b2c
+    name: Accept
+    value: application/json
+    description: ""
+authentication: {}
+metaSortKey: -1651474759347.3906
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

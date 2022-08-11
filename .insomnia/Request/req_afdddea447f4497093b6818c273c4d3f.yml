@@ -1,0 +1,46 @@
+_id: req_afdddea447f4497093b6818c273c4d3f
+type: Request
+parentId: fld_0b8ad5b494c444378457243bd736f5cb
+modified: 1654097976024
+created: 1651473972850
+url: "{{ _.base_url }}/api/user/check"
+name: Check Account By Email
+description: |-
+  Check if the user with exact email exists.
+  ```
+  POST /api/user/check
+
+  Accept: application/json
+  ```
+  # Payload
+
+  ## email `string` `required`
+  The user registered email to check the account existence.
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_b1721b53a2db4f1c81e4079c09176dbd
+      name: email
+      value: howdy@hi5ve.digital
+      description: ""
+      disabled: false
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_173b9edb9931419c8517da7ba3f1fae7
+    disabled: false
+  - id: pair_a771b8bea01545e4aababd53ad8c0708
+    name: Accept
+    value: application/json
+    description: ""
+authentication: {}
+metaSortKey: -1651474313560.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

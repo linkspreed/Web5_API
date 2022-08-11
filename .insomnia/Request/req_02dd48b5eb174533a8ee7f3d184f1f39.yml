@@ -1,0 +1,35 @@
+_id: req_02dd48b5eb174533a8ee7f3d184f1f39
+type: Request
+parentId: fld_33f0bd5f79684e8fadb10cfecf126101
+modified: 1654096448053
+created: 1651502858281
+url: "{{ _.base_url }}/api/teams/invitations/{invitation_id}"
+name: Get Team Folder Invitation
+description: |-
+  Get details from Team Folder invitation.
+
+  ```
+  GET /api/teams/invitations/{invitation_id}
+
+  Accept: application/json
+  ```
+  # URL Parameters
+
+  #### invitation_id `string`
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_c66dc71daf5243d084cbde8b10df4755
+    name: Accept
+    value: application/json
+    description: ""
+authentication: {}
+metaSortKey: -1651475427195.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

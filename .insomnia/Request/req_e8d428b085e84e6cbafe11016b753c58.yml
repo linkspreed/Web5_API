@@ -1,0 +1,39 @@
+_id: req_e8d428b085e84e6cbafe11016b753c58
+type: Request
+parentId: fld_6ff0ba7c9c674ed3a5cc3a201136a471
+modified: 1654097484712
+created: 1651482234282
+url: "{{ _.base_url }}/api/favourites/{folder_id}"
+name: Remove from Favourites
+description: |-
+  Remove folder from your list of favourite folders.
+  ```
+  DELETE /api/favourites/{folder_id}
+
+  Accept: application/json
+  Authorization: Bearer
+  ```
+
+  # URL Parameters
+
+  ## folder_id `uuid` `required`
+  The uuid of the folder to remove from favourites list
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - id: pair_86d40da586414db4b921db28c8812af7
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1651480958850.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

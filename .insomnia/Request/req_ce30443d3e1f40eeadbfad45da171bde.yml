@@ -1,0 +1,35 @@
+_id: req_ce30443d3e1f40eeadbfad45da171bde
+type: Request
+parentId: fld_cbca86fa8b4f41189a36719831403788
+modified: 1654096604409
+created: 1651504533271
+url: "{{ _.base_url }}/api/file-request/{file_request_id}"
+name: Get File Request Detail
+description: |-
+  Get details from file request.
+
+  ```
+  GET /api/file-request/{file_request_id}
+
+  Accept: application/json
+  ```
+  # URL Parameters
+
+  #### file_request_id `string`
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_a5c7de4f2b764b99b8ad1e0932e52880
+    name: Accept
+    value: application/json
+    description: ""
+authentication: {}
+metaSortKey: -1651504340942
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

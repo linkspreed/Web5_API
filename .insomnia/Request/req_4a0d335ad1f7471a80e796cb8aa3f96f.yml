@@ -1,0 +1,78 @@
+_id: req_4a0d335ad1f7471a80e796cb8aa3f96f
+type: Request
+parentId: fld_b63e622064614743b628f68689ec2bde
+modified: 1654099194018
+created: 1652434975425
+url: "{{ _.base_url }}/api/sharing/remove/{token}"
+name: Delete Item
+description: >-
+  Delete one or many files or folders within shared folder.
+
+  ```
+
+  POST /api/sharing/remove/{token}
+
+
+  Accept: application/json
+
+  ```
+
+
+  # URL Parameters
+
+
+  #### token `string`
+
+
+  # Payload
+
+
+  ## items `array` `required`
+
+  The array of the items to remove.
+
+
+  ## items.*.force_delete `boolean` `required`
+
+  Determine how to delete the item. If value is set to yes, then the item will be immediately deleted from the database and storage. If false, the item will be softly deleted. 
+
+
+  ## items.*.type `string` `required`
+
+  The type of the deleting item. Allowed types are `folder` or `file`.
+
+
+  ## items.*.id `uuid` `required`
+
+  The ID of the item.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"items": [
+    		{
+    			"force_delete": false,
+    			"type": "image",
+    			"id": "{item_id}"
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_7f881fab6a5f48e9ae26c2ea51d6e314
+  - id: pair_61f62f1ff45e437085cbb5cd172e6da2
+    name: Accept
+    value: application/json
+    description: ""
+authentication: {}
+metaSortKey: -1652429947330
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

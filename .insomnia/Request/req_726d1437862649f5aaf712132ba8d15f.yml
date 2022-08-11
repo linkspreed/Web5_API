@@ -1,0 +1,62 @@
+_id: req_726d1437862649f5aaf712132ba8d15f
+type: Request
+parentId: fld_c13c11ea5c604c75a36f9af9a67863fe
+modified: 1654097467408
+created: 1651479246959
+url: "{{ _.base_url }}/api/trash/restore"
+name: Restore item
+description: |-
+  Restore one or many file or folder from the trash.
+  ```
+  POST /api/trash/restore
+
+  Accept: application/json
+  Authorization: Bearer
+  ```
+
+  # Payload
+
+  ## to_home `boolean` `required`
+  If value is true, then move restored content to the home.
+
+  ## items `array` `required`
+  The array of items which has to be restored.
+
+  ## items.*.type `string` `required`
+  The type of the restoring item. Allowed types are `folder` or `file`
+
+  ## items.*.id `uuid` `required`
+  The id of the restoring item
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"to_home": true,
+    	"items": [
+    		{
+    			"type": "folder",
+    			"id": "{item_id}"
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_7f881fab6a5f48e9ae26c2ea51d6e314
+  - id: pair_1a2abcac9a164c64bd6e5368c5161a0c
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1651476324235.3125
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

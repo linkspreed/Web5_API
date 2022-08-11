@@ -1,0 +1,43 @@
+_id: req_bbe7d1b63b244c40a7828352990cd3e5
+type: Request
+parentId: fld_ffe856633832466f98b35a5819ffd40b
+modified: 1654096297535
+created: 1651476207238
+url: "{{ _.base_url }}/api/search"
+name: Search Files & Folders
+description: |
+  Search files & folders
+  ```
+  GET /api/search
+
+  Accept: application/json
+  Authorization: Bearer
+  ```
+
+  # Query Parameters
+
+  ## query `string` `required`
+  Your search query to find files or folders
+method: GET
+body: {}
+parameters:
+  - id: pair_09bd2e059d114f539c619d14d2da4c5d
+    name: query
+    value: documents
+    description: ""
+headers:
+  - id: pair_22907bacf0694790bd396c76e189a3e5
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1651474748469.7969
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
